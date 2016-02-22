@@ -1,0 +1,50 @@
+{
+  "name": "texas-holdem",
+  "version": "0.0.0",
+  "description": "A Node game engine for Texas Hold 'Em",
+  "homepage": "https://github.com/jeffclyne/texas-holdem",
+  "author": {
+    "name": "Jeff Clyne",
+    "email": "jefe.wyatt@gmail.com",
+    "url": ""
+  },
+  "files": [
+    "dist"
+  ],
+  "main": "dist/index.js",
+  "keywords": [
+    "node",
+    "texas",
+    "holdem",
+    "poker",
+    "game"
+  ],
+  "devDependencies": {
+    "eslint-config-xo-space": "^0.7.0",
+    "babel-eslint": "^4.1.6",
+    "eslint-plugin-babel": "^3.0.0",
+    "gulp": "^3.9.0",
+    "gulp-eslint": "^1.0.0",
+    "gulp-exclude-gitignore": "^1.0.0",
+    "gulp-istanbul": "^0.10.3",
+    "gulp-mocha": "^2.0.0",
+    "gulp-plumber": "^1.0.0",
+    "gulp-nsp": "^2.1.0",
+    "gulp-babel": "^5.1.0",
+    "del": "^2.0.2",
+    "babel-core": "^5.5.0",
+    "isparta": "^3.0.3"
+  },
+  "eslintConfig": {
+    "extends": "xo-space/esnext",
+    "env": {
+      "mocha": true
+    }
+  },
+  "repository": "jeffclyne/texas-holdem",
+  "scripts": {
+    "prepublish": "gulp prepublish",
+    "test": "gulp"
+  },
+  "license": "ISC"
+}
