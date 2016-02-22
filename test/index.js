@@ -21,21 +21,33 @@ describe('texas-holdem', () => {
     engine.addPlayer('Player 1');
     engine.addPlayer('Player 2');
     engine.addPlayer('Player 3');
-    engine.dealHand();
+    let state = engine.dealHand();
 
     engine.players[0].currentBet.should.equal(0);
     engine.players[1].currentBet.should.equal(5);
     engine.players[2].currentBet.should.equal(10);
-    engine.pot.should.equal(15);
-    engine.currentBet.should.equal(10);
+    state.pot.should.equal(15);
+    state.currentBet.should.equal(10);
   });
 
   it('should set the active player', () => {
     engine.addPlayer('Player 1');
     engine.addPlayer('Player 2');
     engine.addPlayer('Player 3');
+    let state = engine.dealHand();
+
+    state.activePlayer.name.should.equal('Player 1');
+  });
+
+  it('should handle folds', () => {
+    engine.addPlayer('Player 1');
+    engine.addPlayer('Player 2');
+    engine.addPlayer('Player 3');
+    engine.addPlayer('Player 4');
     engine.dealHand();
 
-    engine.activePlayer.name.should.equal('Player 1');
+    let state = engine.fold();
+
+    state.activePlayer.name.should.equal('Player 1');
   });
 });
