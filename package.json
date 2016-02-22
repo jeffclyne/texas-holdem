@@ -46,5 +46,9 @@
     "prepublish": "gulp prepublish",
     "test": "gulp"
   },
-  "license": "ISC"
+  "license": "ISC",
+  "dependencies": {
+    "card-deck": "^1.0.0",
+    "handranker": "^1.0.5"
+  }
 }
